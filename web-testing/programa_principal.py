@@ -2,6 +2,7 @@
 # Esta biblioteca que trará a capacidade para o nosso programa de requisitar a conexão de uma URL na web
 
 import urllib.request
+from time import sleep
 
 def testar_website(site):
 
@@ -14,6 +15,7 @@ def testar_website(site):
     except urllib.error.URLError:
 
         print("Erro na conexão com a internet ou a URL não foi encontrada")
+        sleep(3)
 
         # Irá imprimir esta mensagem caso a conexão não consiga ser estabelecida ou a URL informada não seja encontrada
 
@@ -22,6 +24,7 @@ def testar_website(site):
         # Por fim, com tudo sendo executado corretamente, esta mensagem será impressa
 
         print("Conexão estabelecida com sucesso!")
+        sleep(3)
 
         # print(site.read()) - Esta função "read()" irá realizar a leitura das informações do site em html
 
